@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/login}" method="post">
+    <div>
+        <label for="username">Email address</label>
+        <input type="text" name="username" id="username"/>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"/>
+    </div>
+    <div>
+        <label for="remember-me">Remember me</label>
+        <input type="checkbox" name="remember-me" id="remember-me"/>
+    </div>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+
+
+<!--<form th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+
+    <div>
+        <label for="remember-me">Remember me</label>
+        <input type="checkbox" name="remember-me"/>
+    </div>
+
+    <div><input type="submit" value="Sign In"/></div>
+</form>-->
+
+</body>
+</html>
